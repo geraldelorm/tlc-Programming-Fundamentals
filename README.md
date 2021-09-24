@@ -1,2 +1,2 @@
 ## PROGRAMMING FUNDAMENTALS
-TLC Programming Fundamental Class
+TLC Programming Fundamentals Class
