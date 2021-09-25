@@ -1,23 +1,30 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 int main () {
-	std::cout << "Enter line: " << "\n";
-	std::string input;
-	std::cin >> input;
+	cout << "Enter word: ";
+	string input;
+	cin >> input;
 
+	//just to make this work on the last word--lol--
+	input = input + "-";
+
+	string word = "";
+	int count = 0;
+	
 	for (int i = 0; i < input.size(); i++) {
-		int count = 0;
-		std::string word = "";
-		
-		if ( input[i] != "-") {
-			word = word + input[i];
-			std::cout << count << " " << word ;
-		} else {
+		if (input[i] == '-') {
+			cout << "[" << count << "] " << word;
+			cout << "\n";
+			word = "";
 			count = 0;
-			continue;
-		}		
-		count++
+		} else {
 
-	} 
+			word = word + input[i];
+			count++;
+		}
+	}
+
 }
